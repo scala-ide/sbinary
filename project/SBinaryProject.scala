@@ -15,7 +15,7 @@ object SBinaryProject extends Build
 		version := "0.4.0",
 		scalaVersion := "2.9.0-1",
                 resolvers += ScalaToolsSnapshots,
-		crossScalaVersions := Seq("2.8.1", "2.8.2-SNAPSHOT", "2.9.1","2.10.0-SNAPSHOT"),
+		crossScalaVersions := Seq("2.8.1", "2.8.2", "2.9.1","2.10.0-SNAPSHOT"),
                 publishMavenStyle := true
 	)
 
