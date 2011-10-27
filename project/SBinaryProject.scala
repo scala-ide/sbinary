@@ -13,9 +13,9 @@ object SBinaryProject extends Build
 	lazy val commonSettings: Seq[Setting[_]] = Seq(
 		organization := "org.scala-tools.sbinary",
 		version := "0.4.0",
-		scalaVersion := "2.9.0-1",
+		scalaVersion := "2.9.1",
                 resolvers += ScalaToolsSnapshots,
-		crossScalaVersions := Seq("2.8.1", "2.8.2", "2.9.1","2.10.0-SNAPSHOT"),
+		crossScalaVersions := Seq("2.8.1", "2.8.2", "2.10.0-SNAPSHOT", "2.8.3-SNAPSHOT"),
                 publishMavenStyle := true
 	)
 
