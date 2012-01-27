@@ -15,7 +15,7 @@ object SBinaryProject extends Build
 		version := "0.4.0",
 		scalaVersion := "2.9.1",
                 resolvers += ScalaToolsSnapshots,
-		crossScalaVersions := Seq("2.8.1", "2.8.2", "2.10.0-SNAPSHOT", "2.8.3-SNAPSHOT"),
+		crossScalaVersions := Seq("2.10.0-SNAPSHOT"),
                 publishMavenStyle := true
 	)
 
@@ -38,8 +38,9 @@ object SBinaryProject extends Build
 		name := "SBinary",
 		//scalaCheck,
 		//publishTo := Some("Scala Tools Nexus" at "http://nexus.scala-tools.org/content/repositories/releases/"),
+                //publishTo := Some(Resolver.file("file",  new File(Path.userHome.absolutePath+"/.m2/repository"))),
                 publishTo in ThisBuild <<= publishResolver,
-		credentials += Credentials(Path.userHome / ".ivy2" / ".typesafe-credentials"),
+                credentials += Credentials(Path.userHome / ".ivy2" / ".typesafe-credentials"),
 		unmanagedResources in Compile <+= baseDirectory map { _ / "LICENSE" }
 	)// ++ localPublishSettings
 /*        lazy val localPublishSettings = Seq(
