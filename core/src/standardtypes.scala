@@ -12,7 +12,7 @@ trait BasicTypes extends CoreProtocol{
     }
 
     def writes(out : Output, s : Option[S]) = s match {
-      case Some(x) => { write[Byte](out, 1); write(out, x) }
+      case Some(x) => { write[Byte](out, 1); write[S](out, x) }
       case None => write[Byte](out, 0);
     }
   }
