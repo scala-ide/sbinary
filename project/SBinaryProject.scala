@@ -14,8 +14,10 @@ object SBinaryProject extends Build
 		organization := "org.scala-tools.sbinary",
 		version := "0.4.0",
 		scalaVersion := "2.9.1",
-                resolvers += ScalaToolsSnapshots,
-		crossScalaVersions := Seq("2.10.0-SNAPSHOT"),
+                // resolvers += ScalaToolsSnapshots,
+        resolvers += "Local Maven Repository" at ("file://"+Path.userHome.absolutePath+"/.m2/repository"),
+        // resolvers += "Sonatype Snapshot repo" at ("https://oss.sonatype.org/content/repositories/snapshots"),
+		crossScalaVersions := Seq("2.10.0-SNAPSHOT", "2.10.0-M3"),
                 publishMavenStyle := true
 	)
 
