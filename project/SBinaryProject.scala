@@ -11,7 +11,7 @@ object SBinaryProject extends Build
 
 	lazy val commonSettings: Seq[Setting[_]] = Seq(
 		organization := "org.scala-tools.sbinary",
-		version := "0.4.0",
+		version := "0.4.1-SNAPSHOT",
 		scalaVersion := "2.10.0-M6"
 	)
 
